@@ -1,0 +1,121 @@
+/* ======= Common CSS ======== */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
+}
+
+.form-navbar {
+    position: relative;
+}
+
+.form-navbar:before {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #cccccc;
+}
+
+.form-navbar:before {
+    content: '\f002';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
+    .form-navbar .search-input {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 991px) {
+    .form-navbar {
+        padding: 20px 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+        border-top: 1px solid #E5E9EF;
+        border-bottom: 1px solid #E5E9EF;
+    }
+    .form-navbar:before {
+        left: 25px;
+        z-index: 1;
+    }
+    .form-navbar .search-input {
+        width: 100%;
+        display: block;
+        background: #EDF0F5;
+    }
+    .nav-item-divider {
+        display: block !important;
+    }
+}
+
+.form-navbar .search-input {
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    color: #272727;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    -webkit-appearance: none;
+    border-color: #EDF0F5;
+    padding-left: 30px;
+    height: 35px;
+}
+
+.nav-item-divider {
+    height: 1px;
+    background: #D5DCE5;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+    outline: none;
+}
+
+.navbar {
+    border-bottom: 1px solid #E5E9EF;
+}
+
+/* =========== Search Animated ============= */
+
+@media (min-width: 992px) {
+    .form-navbar.low-z-index:before {
+        z-index: 1;
+    }
+    .form-navbar .search-animated {
+        z-index: 10;
+        border-color: transparent !important;
+        width: 30px;
+        background: transparent !important;
+        padding-right: 0;
+        -webkit-transition: 250ms;
+        transition: 250ms;
+    }
+    .form-navbar .search-animated:focus {
+        width: 247px;
+        padding-right: 0.75rem;
+    }
+}
